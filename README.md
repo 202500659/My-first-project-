@@ -1,20 +1,26 @@
-# PocketSmart AI
+# PocketSmart AI - Smart Budget & Recommendation Assistant
 
-## Smart Budget & Recommendation Assistant
+## Developer
+- Name: SARANYA R P
+- Register Number: 202500659
+- Department: B.Sc Computer Science
 
-### Team Member
-- R.P. Saranya
-
-## Project Overview
-PocketSmart AI helps users track daily expenses, categorize spending, and get AI-based money-saving suggestions.
+## About
+PocketSmart AI is a budget planning website that helps users plan expenses for home interiors, party events, and jewelry shopping.
 
 ## Features
-- Expense Tracking
-- Budget Analysis
-- AI Recommendations
-- Monthly Spending Summary
+- Home Interior Planner
+- Party Budget Planner
+- Jewelry Budget Planner
+- Login and Register
+- User Dashboard
+- Recommendation History
 
-## Tools Used
-- Google Gemini
-- Google Sheets
-- GitHub
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages
+
+## Project Status
+This project is successfully deployed as a live website using GitHub Pages.

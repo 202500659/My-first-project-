@@ -27,7 +27,8 @@
 </select>
 
 <label>Upload Outfit Image (Optional)</label>
-<input type="file" accept="image/*">
+<input type="file" id="outfit" accept="image/*" onchange="previewImage(event)">
+<img id="preview" style="display:none;width:150px;border-radius:12px;margin-top:10px;">
 
 <button onclick="jewelAI()">Generate AI Recommendation</button>
 

@@ -2,23 +2,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Jewelry Planner</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
+
 <h1>💍 Jewelry Budget Planner</h1>
+<p>Get jewelry suggestions based on your budget and occasion.</p>
 
 <div class="card">
 
-<label>Budget (₹)</label><br><br>
+<label>Budget (₹)</label>
 <input type="number" id="budget" placeholder="Enter Budget">
 
-<br><br>
-
-<label>Occasion</label><br><br>
+<label>Occasion</label>
 <select id="occasion">
 <option>Wedding</option>
 <option>Birthday</option>
@@ -26,27 +26,56 @@
 <option>Engagement</option>
 </select>
 
-<br><br>
+<label>Upload Outfit Image (Optional)</label>
+<input type="file" accept="image/*">
 
-<button onclick="jewelAI()">Generate Recommendation</button>
+<button onclick="jewelAI()">Generate AI Recommendation</button>
 
 </div>
 
 <div class="card">
-<h3>AI Recommendation</h3>
-<p id="result">Your jewelry suggestions will appear here.</p>
+
+<span class="badge">AI Recommended Jewelry</span>
+
+<div id="result">
+
+<div class="product">
+<span>✨ Gold Earrings</span>
+<strong>₹1,499</strong>
 </div>
 
-<a href="index.html">⬅ Back to Home</a>
+<div class="product">
+<span>💎 Diamond Necklace</span>
+<strong>₹4,999</strong>
+</div>
+
+<div class="product">
+<span>🌸 Silver Bracelet</span>
+<strong>₹999</strong>
+</div>
+
+</div>
+
+</div>
+
+<button onclick="window.location='dashboard.html'">
+⬅ Back
+</button>
 
 </div>
 
 <script>
 function jewelAI(){
+
 let b=document.getElementById("budget").value;
 let o=document.getElementById("occasion").value;
 
-document.getElementById("result").innerHTML=
-"Budget: ₹"+b+
-"<br>Occasion: "+o+
-"<br><br>✨ Gold
+document.getElementById("result").innerHTML=`
+<div class="product">
+<span>✨ Gold Earrings</span>
+<strong>₹1,499</strong>
+</div>
+
+<div class="product">
+<span>💎 Diamond Necklace</span>
+<strong>₹4,999</strong

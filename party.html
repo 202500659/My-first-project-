@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Party Planner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+<h1>🎉 Party Budget Planner</h1>
+
+<div class="card">
+<label>Budget (₹)</label><br><br>
+<input type="number" id="budget" placeholder="Enter Budget">
+
+<br><br>
+
+<label>Number of Guests</label><br><br>
+<input type="number" id="guests" placeholder="Enter Guests">
+
+<br><br>
+
+<button onclick="partyAI()">Generate Plan</button>
+</div>
+
+<div class="card">
+<h3>AI Recommendation</h3>
+<p id="result">Your party plan will appear here.</p>
+</div>
+
+<a href="index.html">⬅ Back to Home</a>
+</div>
+
+<script>
+function partyAI(){
+let b=document.getElementById("budget").value;
+let g=document.getElementById("guests").value;
+
+document.getElementById("result").innerHTML=
+"Budget: ₹"+b+
+"<br>Guests: "+g+
+"<br><br>🍔 Catering: Swiggy / Zomato"+
+"<br>🎈 Decoration: Amazon"+
+"<br>🏨 Venue: OYO";
+}
+</script>
+
+</body>
+</html>

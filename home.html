@@ -55,6 +55,26 @@
 
 <script>
 function homeAI(){
+  let b=document.getElementById("budget").value;
+
+  showLoading("result", function(){
+    document.getElementById("result").innerHTML=`
+      <div class="product">
+        <span>💡 LED Light (Amazon)</span>
+        <strong>₹499</strong>
+      </div>
+      <div class="product">
+        <span>🪑 Dining Table (IKEA)</span>
+        <strong>₹4,999</strong>
+      </div>
+      <div class="product">
+        <span>🌀 Ceiling Fan (Flipkart)</span>
+        <strong>₹1,999</strong>
+      </div>
+      <p style="color:green;">Budget: ₹${b}</p>
+    `;
+  });
+}(){
 
 let b=document.getElementById("budget").value;
 

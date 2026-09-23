@@ -63,6 +63,7 @@ function homeAI(){
   let b=document.getElementById("budget").value;
 
   showLoading("result", function(){
+    document.getElementById("result").innerHTML='<div class="spinner"></div><p>Analyzing your budget...</p>';
     document.getElementById("result").innerHTML=`
       <div class="product">
         <span>💡 LED Light (Amazon)</span>

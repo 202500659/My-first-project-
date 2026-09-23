@@ -2,42 +2,86 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Home Planner</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
+
 <h1>🏠 Home Interior Planner</h1>
+<p>Enter your budget and get smart recommendations.</p>
 
 <div class="card">
 
-<label>Budget (₹)</label><br><br>
+<label>Budget (₹)</label>
+<input type="number" id="budget" placeholder="Enter Budget">
 
-<input type="number" id="budget" placeholder="Enter your budget">
-
-<br><br>
-
-<button onclick="homeAI()">Generate Recommendation</button>
+<button onclick="homeAI()">Generate AI Recommendation</button>
 
 </div>
 
 <div class="card">
 
-<h3>AI Recommendation</h3>
+<span class="badge">AI Recommended Products</span>
 
-<p id="result">
-Your recommendation will appear here.
+<div id="result">
+
+<div class="product">
+<span>💡 LED Light (Amazon)</span>
+<strong>₹499</strong>
+</div>
+
+<div class="product">
+<span>🪑 Dining Table (IKEA)</span>
+<strong>₹4,999</strong>
+</div>
+
+<div class="product">
+<span>🌀 Ceiling Fan (Flipkart)</span>
+<strong>₹1,999</strong>
+</div>
+
+</div>
+
+</div>
+
+<button onclick="window.location='dashboard.html'">
+⬅ Back
+</button>
+
+</div>
+
+<script>
+function homeAI(){
+
+let b=document.getElementById("budget").value;
+
+document.getElementById("result").innerHTML=
+`
+<div class="product">
+<span>💡 LED Light (Amazon)</span>
+<strong>₹499</strong>
+</div>
+
+<div class="product">
+<span>🪑 Dining Table (IKEA)</span>
+<strong>₹4,999</strong>
+</div>
+
+<div class="product">
+<span>🌀 Ceiling Fan (Flipkart)</span>
+<strong>₹1,999</strong>
+</div>
+
+<p style="margin-top:15px;color:green;">
+Budget: ₹${b}
 </p>
+`;
 
-</div>
-
-<a href="index.html">⬅ Back to Home</a>
-
-</div>
-
-<script src="script.js"></script>
+}
+</script>
 
 </body>
 </html>

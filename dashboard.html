@@ -3,45 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dashboard - PocketSmart AI</title>
+<title>Jewelry Planner</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-<h1>👋 Welcome, Saranya</h1>
-<p>Your Smart Budget Dashboard</p>
+<h1>💍 Jewelry Budget Planner</h1>
+<p>Get jewelry suggestions based on your budget and occasion.</p>
 
 <div class="card">
-<h3>Quick Access</h3>
 
-<button onclick="window.location='home.html'">🏠 Home Planner</button>
-<br><br>
+<label>Budget (₹)</label>
+<input type="number" id="budget" placeholder="Enter Budget">
 
-<button onclick="window.location='party.html'">🎉 Party Planner</button>
-<br><br>
+<label>Occasion</label>
+<select id="occasion">
+<option>Wedding</option>
+<option>Birthday</option>
+<option>Festival</option>
+<option>Engagement</option>
+</select>
 
-<button onclick="window.location='jewelry.html'">💍 Jewelry Planner</button>
+<label>Upload Outfit Image (Optional)</label>
+<input type="file" accept="image/*">
+
+<button onclick="jewelAI()">Generate AI Recommendation</button>
+
 </div>
 
 <div class="card">
-<h3>Recent Recommendations</h3>
-<ul>
-<li>Home Budget: ₹20,000</li>
-<li>Party Budget: ₹20,000</li>
-<li>Jewelry Budget: ₹2,00,000</li>
-</ul>
+
+<span class="badge">AI Recommended Jewelry</span>
+
+<div id="result">
+
+<div class="product">
+<span>✨ Gold Earrings</span>
+<strong>₹1,499</strong>
 </div>
 
-<div class="card">
-<h3>Saved Features</h3>
-<p>✔ Budget Tracking</p>
-<p>✔ AI Suggestions</p>
-<p>✔ Multi-category Planning</p>
+<div class="product">
+<span>💎 Diamond Necklace</span>
+<strong>₹4,999</strong>
+</div>
+
+<div class="product">
+<span>🌸 Silver Bracelet</span>
+<strong>₹999</strong>
 </div>
 
 </div>
+
+</div>
+
+<button onclick="window.location='dashboard.html'">
+⬅ Back
+</button>
+
+</div>
+
+<script>
+function jewelAI(){
+
+let b=document.getElementById("budget").value;
+let o=document.getElementById("occasion").value;
+
+document.getElementById("result").innerHTML=`
+<div class="product">
+<span>✨ Gold Earrings</span>
+<strong>₹1,499</strong>
+</div>
+
+<div class="product">
+<span>💎 Diamond Necklace</span>
+<strong>₹4,999</strong>
+</div>
+
+<div class="product">
+<span>🌸 Silver Bracelet</span>
+<strong>₹999</strong>
+</div>
+
+<p style="margin-top:15px;color:green;">
+Occasion: ${o}<br>
+Budget: ₹${b}
+</p>
+`;
+}
+</script>
 
 </body>
 </html>

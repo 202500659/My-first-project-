@@ -2,9 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PocketSmart AI</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 </head>
 <body>
 
@@ -14,26 +15,37 @@
 <p>Smart Budget & Recommendation Assistant</p>
 
 <div class="card">
+<h2>🔐 Account</h2>
+<button onclick="go('login.html')">Login</button>
+<button onclick="go('register.html')">Register</button>
+</div>
+
+<div class="card">
+<h2>📊 Dashboard</h2>
+<button onclick="go('dashboard.html')">Open Dashboard</button>
+</div>
+
+<div class="card">
 <h2>🏠 Home Interior Planner</h2>
-<p>Furniture, Lights, Fans & Decor</p>
-<button onclick="go('home.html')">Open Planner</button>
+<button onclick="go('home.html')">Open</button>
 </div>
 
 <div class="card">
-<h2>🎉 Party Budget Planner</h2>
-<p>Food, Venue & Decorations</p>
-<button onclick="go('party.html')">Open Planner</button>
+<h2>🎉 Party Planner</h2>
+<button onclick="go('party.html')">Open</button>
 </div>
 
 <div class="card">
-<h2>💍 Jewelry Budget Planner</h2>
-<p>Occasion & Budget Based Suggestions</p>
-<button onclick="go('jewelry.html')">Open Planner</button>
+<h2>💍 Jewelry Planner</h2>
+<button onclick="go('jewelry.html')">Open</button>
+</div>
+
+<div class="card">
+<h2>📜 Recommendation History</h2>
+<button onclick="go('history.html')">View History</button>
 </div>
 
 </div>
-
-<script src="script.js"></script>
 
 </body>
 </html>

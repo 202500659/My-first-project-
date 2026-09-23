@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jewelry Planner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+<h1>💍 Jewelry Budget Planner</h1>
+
+<div class="card">
+
+<label>Budget (₹)</label><br><br>
+<input type="number" id="budget" placeholder="Enter Budget">
+
+<br><br>
+
+<label>Occasion</label><br><br>
+<select id="occasion">
+<option>Wedding</option>
+<option>Birthday</option>
+<option>Festival</option>
+<option>Engagement</option>
+</select>
+
+<br><br>
+
+<button onclick="jewelAI()">Generate Recommendation</button>
+
+</div>
+
+<div class="card">
+<h3>AI Recommendation</h3>
+<p id="result">Your jewelry suggestions will appear here.</p>
+</div>
+
+<a href="index.html">⬅ Back to Home</a>
+
+</div>
+
+<script>
+function jewelAI(){
+let b=document.getElementById("budget").value;
+let o=document.getElementById("occasion").value;
+
+document.getElementById("result").innerHTML=
+"Budget: ₹"+b+
+"<br>Occasion: "+o+
+"<br><br>✨ Gold

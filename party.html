@@ -2,48 +2,90 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Party Planner</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
+
 <h1>🎉 Party Budget Planner</h1>
+<p>Plan your event within your budget.</p>
 
 <div class="card">
-<label>Budget (₹)</label><br><br>
+
+<label>Total Budget (₹)</label>
 <input type="number" id="budget" placeholder="Enter Budget">
 
-<br><br>
-
-<label>Number of Guests</label><br><br>
+<label>Guests</label>
 <input type="number" id="guests" placeholder="Enter Guests">
 
-<br><br>
-
 <button onclick="partyAI()">Generate Plan</button>
+
 </div>
 
 <div class="card">
-<h3>AI Recommendation</h3>
-<p id="result">Your party plan will appear here.</p>
+
+<span class="badge">AI Budget Split</span>
+
+<div id="result">
+
+<div class="product">
+<span>🍔 Food (Swiggy)</span>
+<strong>50%</strong>
 </div>
 
-<a href="index.html">⬅ Back to Home</a>
+<div class="product">
+<span>🎈 Decoration (Amazon)</span>
+<strong>30%</strong>
+</div>
+
+<div class="product">
+<span>🏨 Venue (OYO)</span>
+<strong>20%</strong>
+</div>
+
+</div>
+
+</div>
+
+<button onclick="window.location='dashboard.html'">
+⬅ Back
+</button>
+
 </div>
 
 <script>
 function partyAI(){
-let b=document.getElementById("budget").value;
+
+let b=Number(document.getElementById("budget").value)||0;
 let g=document.getElementById("guests").value;
 
-document.getElementById("result").innerHTML=
-"Budget: ₹"+b+
-"<br>Guests: "+g+
-"<br><br>🍔 Catering: Swiggy / Zomato"+
-"<br>🎈 Decoration: Amazon"+
-"<br>🏨 Venue: OYO";
+let food=Math.round(b*0.50);
+let deco=Math.round(b*0.30);
+let venue=Math.round(b*0.20);
+
+document.getElementById("result").innerHTML=`
+<div class="product">
+<span>🍔 Food (Swiggy)</span>
+<strong>₹${food}</strong>
+</div>
+
+<div class="product">
+<span>🎈 Decoration (Amazon)</span>
+<strong>₹${deco}</strong>
+</div>
+
+<div class="product">
+<span>🏨 Venue (OYO)</span>
+<strong>₹${venue}</strong>
+</div>
+
+<p style="margin-top:15px;color:green;">
+Guests: ${g}
+</p>
+`;
 }
 </script>
 
